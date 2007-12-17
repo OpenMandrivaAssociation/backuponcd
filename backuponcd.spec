@@ -17,7 +17,6 @@ Patch1:		%{name}-rcmod.patch.bz2
 Patch2:		%{name}-doc.patch.bz2
 
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 BackupOnCd is a set of shell scripts which make multi-volume backups on CD-RW
