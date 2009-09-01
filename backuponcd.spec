@@ -1,6 +1,6 @@
 %define name		backuponcd
 %define version		0.9.1
-%define release		%mkrel 10
+%define release		%mkrel 11
 
 %define summary		Multi-CD backup shell scripts
 %define group		Archiving/Backup
