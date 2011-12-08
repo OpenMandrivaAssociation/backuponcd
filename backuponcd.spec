@@ -34,7 +34,7 @@ Be sure to modify /etc/backuponcd/global.rc to suit your system!
 
 
 # (pc) another dirty hack to clean out some temp files
-for i in `find $RPM_BUILD_DIR/%name-%version -path '*~'`; do rm -f $i; done
+for i in `find %{_builddir}/%name-%version -path '*~'`; do rm -f $i; done
 
 # (pc) modify global.rc for more of a typical mdk setup
 %patch1 -p0
@@ -46,15 +46,15 @@ for i in `find $RPM_BUILD_DIR/%name-%version -path '*~'`; do rm -f $i; done
 [ -n "%{buildroot}" -a "%{buildroot}" != / ] && rm -rf %{buildroot}
 
 mkdir -p %{buildroot}{%{_sbindir},%{_sysconfdir}/%{name}}
-cp $RPM_BUILD_DIR/%name-%version/usr/local/sbin/* %{buildroot}%{_sbindir}
-cp $RPM_BUILD_DIR/%name-%version/etc/%{name}/global.rc %{buildroot}%{_sysconfdir}/%{name}
-cp $RPM_BUILD_DIR/%name-%version/usr/doc/%{name}/samples/excludelist %{buildroot}%{_sysconfdir}/%{name}
+cp %{_builddir}/%name-%version/usr/local/sbin/* %{buildroot}%{_sbindir}
+cp %{_builddir}/%name-%version/etc/%{name}/global.rc %{buildroot}%{_sysconfdir}/%{name}
+cp %{_builddir}/%name-%version/usr/doc/%{name}/samples/excludelist %{buildroot}%{_sysconfdir}/%{name}
 
 chmod 755 %{buildroot}%{_sbindir}/*
 
 %clean
 [ -n "%{buildroot}" -a "%{buildroot}" != / ] && rm -rf %{buildroot}
-rm -rf $RPM_BUILD_DIR/*
+rm -rf %{_builddir}/*
 
 
 %files
