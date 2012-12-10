@@ -1,2 +1,4 @@
 sources:
-  "backuponcd.tar.bz2:"	c49df3f70c5629936cab960134b9b3d96e7fa4ab
+  "backuponcd-doc.patch.bz2": 124a56a28e86f3de007f03c4cdee37020c92a492
+  "backuponcd-rcmod.patch.bz2": a37b7c45cce7531af76917873cf42b2e44c0d188
+  "backuponcd.tar.bz2": c49df3f70c5629936cab960134b9b3d96e7fa4ab
