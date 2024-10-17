@@ -11,7 +11,7 @@ Version:	%{version}
 Release:	%{release}
 License:	GPL
 Group:		%{group}
-URL:		http://www.tuxoncd.de/backuponcd/pub/backuponcd.html/
+URL:		https://www.tuxoncd.de/backuponcd/pub/backuponcd.html/
 Source:		%{name}.tar.bz2
 Patch1:		%{name}-rcmod.patch.bz2
 Patch2:		%{name}-doc.patch.bz2
